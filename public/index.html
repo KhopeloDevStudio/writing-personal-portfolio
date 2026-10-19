@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thato's Writing Portfolio | Home Page</title>
+    <link href="/css/global.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Header Navigation (Matches Homepage for Consistency) -->
+    <header>
+      <!-- Logo/Title on the Left -->
+      <a class="web-title" href="index.html"> Thato's Writing Portfolio </a>
+
+      <!-- Navigation Menu on the Right -->
+      <nav class="nav-menu">
+        <a href="about.html">About Me</a>
+        <a href="projects.html">My Projects</a>
+        <a href="contact.html">Contact Me</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Banner -->
+      <section class="hero-banner">
+        <h1>Welcome to Thato's Writing Portfolio</h1>
+
+        <p>
+          Explore a collection of my writing projects, including articles,
+          essays, and creative works. Feel free to browse through my portfolio
+          and get in touch if you'd like to collaborate or learn more about my
+          work.
+        </p>
+
+        <a href="public/projects.html" class="cta-button">View My Work</a>
+      </section>
+
+      <!-- Featured Projects Section shown in a grid with 3 cards in a row -->
+      <section class="featured-projects">
+        <h2>Featured Projects</h2>
+
+        <!-- Carousel Container Control Area -->
+        <div class="carousel-wrapper">
+          <!-- Desktop Navigation Buttons -->
+          <button class="carousel-btn prev-btn" aria-label="Previous script">
+            ‹
+          </button>
+
+          <!-- The Window that cuts off extra cards -->
+          <div class="carousel-track-container">
+            <!-- The long row holding all cards -->
+            <div class="carousel-track">
+              <!-- Card 1 -->
+              <article class="script-card">
+                <span class="script-tag">TV Pilot • Drama</span>
+                <h3>The Red Horizon</h3>
+                <p class="logline">
+                  When an isolated communication outpost picks up an ancient
+                  human radio broadcast from deep space, a cynical technician
+                  must decipher it before a militarized corporate fleet destroys
+                  the signal source.
+                </p>
+                <a href="/projects/project1" class="read-btn">Read Script</a>
+              </article>
+
+              <!-- Card 2 -->
+              <article class="script-card">
+                <span class="script-tag">Feature Film • Sci-Fi</span>
+                <h3>Neon Echoes</h3>
+                <p class="logline">
+                  A detective specializing in synthetic memory extraction falls
+                  down a dangerous rabbit hole after discovering a murder memory
+                  that technically belongs to her own deceased twin sister.
+                </p>
+                <a href="/projects/project2" class="read-btn">Read Script</a>
+              </article>
+
+              <!-- Card 3 -->
+              <article class="script-card">
+                <span class="script-tag">Web Series • Comedy</span>
+                <h3>Behind the Screen</h3>
+                <p class="logline">
+                  Four struggling production assistants accidentally record an
+                  A-list actor's meltdown and must somehow navigate Hollywood
+                  egos, blackmail threats, and terrible catering to secure a
+                  promotion.
+                </p>
+                <a href="/projects/project3" class="read-btn">Read Script</a>
+              </article>
+
+              <!-- Card 4 (Hidden initially, slides in when moving the carousel) -->
+              <article class="script-card">
+                <span class="script-tag">Feature Film • Thriller</span>
+                <h3>Shadow Work</h3>
+                <p class="logline">
+                  An expert art restorer uncovers a hidden message embedded
+                  underneath a masterpiece painting, accidentally triggering a
+                  deadly game of cat-and-mouse with a secret society.
+                </p>
+                <a href="/projects/project4" class="read-btn">Read Script</a>
+              </article>
+            </div>
+          </div>
+
+          <button class="carousel-btn next-btn" aria-label="Next script">
+            ›
+          </button>
+        </div>
+      </section>
+
+      <!-- Biography Section Below -->
+      <section class="biography">
+        <h2>About the Writer</h2>
+        <div class="bio-content">
+          <p>
+            <strong>Thato [Last Name]</strong> is a screenwriter specializing in
+            high-concept hour-long TV dramas and sci-fi feature films. Pulling
+            from a foundational background in investigative journalism and a
+            lifetime obsession with cinematic worldbuilding, Thato crafts
+            intricate, character-driven narratives focused on moral gray areas,
+            identity, and technological friction.
+          </p>
+          <p>
+            Thato’s work has received notable recognition across major
+            screenwriting platforms, landing as a [Semifinalist /
+            Quarterfinalist] in the Austin Film Festival Screenplay Competition
+            and placing in the Top 10% on the Black List. Dedicated to pushing
+            the boundaries of speculative storytelling, Thato holds a [Degree
+            Name or relevant experience] and is actively seeking representation
+            and development opportunities.
+          </p>
+        </div>
+      </section>
+
+      <!-- Mini Contact Section on Homepage -->
+      <section class="contact-home">
+        <h2>Let's Collaborate</h2>
+        <p>
+          Interested in reading a full script feature, requesting a pilot PDF,
+          or discussing representation and writing assignments? Drop a message
+          below.
+        </p>
+
+        <!-- The Interactive Contact Form -->
+        <form action="#" method="POST" class="contact-form">
+          <!-- Name Input Field -->
+          <div class="form-group">
+            <label for="user-name">Full Name</label>
+            <input
+              type="text"
+              id="user-name"
+              name="name"
+              placeholder="John Doe"
+              required
+            />
+          </div>
+
+          <!-- Contact Method Fields -->
+          <div class="form-group">
+            <label for="user-email">Email Address</label>
+            <input
+              type="email"
+              id="user-email"
+              name="email"
+              placeholder="name@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="user-phone">Phone Number (Optional)</label>
+            <input
+              type="tel"
+              id="user-phone"
+              name="phone"
+              placeholder="+27 12 345 6789"
+            />
+          </div>
+
+          <!-- The Message Box -->
+          <div class="form-group">
+            <label for="user-message">Your Message</label>
+            <textarea
+              id="user-message"
+              name="message"
+              rows="5"
+              placeholder="Tell Thato about your project, script request, or collaboration idea..."
+              required
+            ></textarea>
+          </div>
+
+          <!-- Submit Action Button -->
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Writer & Developer Footer -->
+    <footer>
+      <div class="footer-content">
+        <!-- Copyright & Legal Disclaimer -->
+        <p>&copy; 2026 Thato [Last Name]. All rights reserved.</p>
+        <p class="legal-disclaimer">
+          All original screenplays, pilots, and treatments are protected under
+          the South African Copyright Act and international intellectual
+          property laws.
+        </p>
+
+        <!-- Developer Credit -->
+        <p class="developer-credit">
+          Website designed and developed by
+          <a
+            href="https://github.com/KhopeloDevStudio"
+            target="_blank"
+            rel="noopener"
+            >Khopelo Morake</a
+          >
+          <!-- Once company is registered, change it to: -->
+          <!-- <a href="https://yourcompany.co.za" target="_blank" rel="noopener">Company Name</a> -->
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thato's Writing Portfolio | Contact Thato</title>
+  </head>
+
+  <body>
+    <!-- Header Navigation (Matches Homepage for Consistency) -->
+    <header>
+      <!-- Logo/Title on the Left -->
+      <a class="web-title" href="index.html"> Thato's Writing Portfolio </a>
+
+      <!-- Navigation Menu on the Right -->
+      <nav class="nav-menu">
+        <a href="about.html">About Me</a>
+        <a href="projects.html">My Projects</a>
+        <a href="contact.html" class="active">Contact Me</a>
+      </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+      <section class="formal-contact-section">
+        <h2>Get in Touch</h2>
+        <p class="contact-intro">
+          For script requests, representation inquiries, project options, or
+          collaboration opportunities in film and television, please use the
+          formal channel below.
+        </p>
+
+        <!-- Formal Industry Contact Form -->
+        <form action="#" method="POST" class="formal-contact-form">
+          <!-- Full Name -->
+          <div class="form-group">
+            <label for="contact-name">Full Name</label>
+            <input
+              type="text"
+              id="contact-name"
+              name="name"
+              placeholder="e.g., Sarah Khumalo"
+              required
+            />
+          </div>
+
+          <!-- Company / Production House -->
+          <div class="form-group">
+            <label for="contact-company"
+              >Company / Production House (Optional)</label
+            >
+            <input
+              type="text"
+              id="contact-company"
+              name="company"
+              placeholder="e.g., Cape Town Films"
+            />
+          </div>
+
+          <!-- Contact Details -->
+          <div class="form-group">
+            <label for="contact-email">Email Address</label>
+            <input
+              type="email"
+              id="contact-email"
+              name="email"
+              placeholder="name@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-phone">Phone Number (Optional)</label>
+            <input
+              type="tel"
+              id="contact-phone"
+              name="phone"
+              placeholder="e.g., +27 82 123 4567"
+            />
+          </div>
+
+          <!-- Reason for Inquiry (Industry Dropdown) -->
+          <div class="form-group">
+            <label for="contact-reason">Reason for Inquiry</label>
+            <select id="contact-reason" name="reason" required>
+              <option value="" disabled selected>Select an option...</option>
+              <option value="script-request">Full Script PDF Request</option>
+              <option value="representation">
+                Representation Inquiry (Agent/Manager)
+              </option>
+              <option value="collaboration">Co-Writing & Collaboration</option>
+              <option value="hiring">Hiring / Writing Assignment</option>
+              <option value="other">Other Business Inquiry</option>
+            </select>
+          </div>
+
+          <!-- Detailed Message Box -->
+          <div class="form-group">
+            <label for="contact-message">Inquiry Details</label>
+            <textarea
+              id="contact-message"
+              name="message"
+              rows="8"
+              placeholder="Please provide specific details regarding your project, script interest, or timeline..."
+              required
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn">
+            Submit Formal Inquiry
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer (Matches Homepage for Consistency) -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2026 Thato [Last Name]. All rights reserved.</p>
+        <p class="legal-disclaimer">
+          All original screenplays, pilots, and treatments are protected under
+          the South African Copyright Act and international intellectual
+          property laws.
+        </p>
+        <p class="developer-credit">
+          Website designed and developed by
+          <a
+            href="https://github.com/KhopeloDevStudio"
+            target="_blank"
+            rel="noopener"
+            >Khopelo Morake</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
