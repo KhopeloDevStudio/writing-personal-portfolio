@@ -1,26 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Thato's Writing Portfolio | About Me</title>
+    <link href="/css/global.css" rel="stylesheet" />
   </head>
 
   <body>
     <!-- Header Navigation (Matches Homepage for Consistency) -->
     <header>
-      <!-- Logo/Title on the Left -->
       <a class="web-title" href="index.html"> Thato's Writing Portfolio </a>
 
-      <!-- Navigation Menu on the Right -->
       <nav class="nav-menu">
-        <a href="about.html" class="active">About Me</a>
-        <a href="projects.html">My Projects</a>
+        <a href="about.html">About Me</a>
+        
+        <!-- Dropdown Menu Item -->
+        <div class="dropdown">
+          <a href="projects.html" class="active">My Projects ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="#all-projects">All Projects</a></li>
+            <li><a href="#tv-scripts">TV Scripts</a></li>
+            <li><a href="#movie-scripts">Movie Scripts</a></li>
+            <li><a href="#short-films">Short Films</a></li>
+          </ul>
+        </div>
+
         <a href="contact.html">Contact Me</a>
       </nav>
     </header>
 
-    <main></main>
+    <!-- Main Content Area -->
+    <main>
+      <br />
+      <section class="about-hero">
+        <h2>About the Writer</h2>
+        <br />
+        <p class="subtitle">
+          Crafting high-concept narratives, moral complexities, and immersive cinematic worlds.
+        </p>
+      </section>
+
+      <br />
+
+      <!-- Detailed Biography Section -->
+      <section class="biography-detailed">
+        <div class="bio-container">
+          <div class="bio-text">
+            <h3>Background & Vision</h3>
+
+            <br />
+
+            <p>
+              <strong>Thato [Last Name]</strong> is a professional screenwriter specializing in
+              high-concept hour-long TV dramas and sci-fi feature films[cite: 2]. Pulling
+              from a foundational background in investigative journalism and a
+              lifetime obsession with cinematic worldbuilding, Thato crafts
+              intricate, character-driven narratives focused on moral gray areas,
+              identity, and technological friction[cite: 2].
+            </p>
+
+            <br />
+
+            <p>
+              Having lived and worked across dynamic cultural landscapes, Thato’s writing explores how ordinary people navigate extraordinary circumstances under pressure. Whether dealing with near-future surveillance states or nuanced interpersonal dramas, the core of every script remains deeply human.
+            </p>
+            <br />
+
+            <h3>Recognition & Achievements</h3>
+
+            <br />
+
+            <p>
+              Thato’s work has received notable recognition across major
+              international and regional screenwriting platforms, landing as a [Semifinalist /
+              Quarterfinalist] in the Austin Film Festival Screenplay Competition
+              and placing in the Top 10% on the Black List[cite: 2]. These milestones reflect a dedication to rigorous story structure, snappy dialogue, and resonant thematic depth.
+            </p>
+
+            <br />
+
+            <h3>Education & Professional Focus</h3>
+
+            <br />
+
+            <p>
+              Dedicated to pushing the boundaries of speculative storytelling, Thato holds a [Degree
+              Name or relevant experience] and is actively seeking literary representation, production partnerships, and collaborative writing assignments[cite: 2].
+            </p>
+
+            <br />
+
+            <div class="about-cta">
+              <a href="projects.html" class="cta-button">Explore My Screenplays</a>
+              <a href="contact.html" class="cta-secondary-button">Get in Touch</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Writer & Developer Footer -->
     <footer>
@@ -47,5 +125,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="/js/global.js"></script>
   </body>
 </html>

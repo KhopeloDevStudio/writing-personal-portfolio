@@ -1,26 +1,127 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Thato's Writing Portfolio | My Projects</title>
+    <link href="/css/global.css" rel="stylesheet" />
+    <link href="/css/projects.css" rel="stylesheet" />
   </head>
 
   <body>
     <!-- Header Navigation (Matches Homepage for Consistency) -->
     <header>
-      <!-- Logo/Title on the Left -->
       <a class="web-title" href="index.html"> Thato's Writing Portfolio </a>
 
-      <!-- Navigation Menu on the Right -->
       <nav class="nav-menu">
         <a href="about.html">About Me</a>
-        <a href="projects.html" class="active">My Projects</a>
+        
+        <!-- Dropdown Menu Item -->
+        <div class="dropdown">
+          <a href="projects.html" class="active">My Projects ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="#all-projects">All Projects</a></li>
+            <li><a href="#tv-scripts">TV Scripts</a></li>
+            <li><a href="#movie-scripts">Movie Scripts</a></li>
+            <li><a href="#short-films">Short Films</a></li>
+          </ul>
+        </div>
+
         <a href="contact.html">Contact Me</a>
       </nav>
     </header>
 
-    <main></main>
+    <!-- Main Content Area -->
+    <main class="projects-layout">
+      <!-- Sidebar Filtering Tab System -->
+      <aside class="filter-sidebar">
+        <h3>Filter Portfolio</h3>
+        <ul class="filter-list">
+          <li><button class="filter-btn active" onclick="filterCategory('all')">All Scripts</button></li>
+          <li><button class="filter-btn" onclick="filterCategory('tv')">TV Scripts</button></li>
+          <li><button class="filter-btn" onclick="filterCategory('movie')">Movie Scripts</button></li>
+          <li><button class="filter-btn" onclick="filterCategory('short')">Short Films</button></li>
+        </ul>
+      </aside>
+
+      <!-- Archive Content -->
+      <section class="archive-main" id="all-projects">
+        <h2>Screenplay Portfolio Archive</h2>
+        <br />
+        <p>
+          Explore categorized television pilots, feature-length films, and short narrative works. Click any card to request full script access.
+        </p>
+
+        <!-- TV Scripts Section -->
+        <div class="script-category-section" id="tv-scripts" data-category="tv">
+          <h3>TV Scripts</h3>
+          <div class="script-row-container">
+            <button class="row-nav-btn row-prev" onclick="scrollRow('tv-row', -300)">‹</button>
+            <div class="script-horizontal-row" id="tv-row">
+              <article class="script-card">
+                <span class="script-tag">TV Pilot • Drama</span>
+                <h3>The Red Horizon</h3>
+                <p class="logline">When an isolated communication outpost picks up an ancient human radio broadcast from deep space, a cynical technician must decipher it before a militarized fleet arrives.</p>
+                <a href="/projects/project1" class="read-btn">Request Script PDF</a>
+              </article>
+              <article class="script-card">
+                <span class="script-tag">Web Series • Comedy</span>
+                <h3>Behind the Screen</h3>
+                <p class="logline">Four struggling production assistants accidentally record an A-list actor's meltdown and must navigate Hollywood egos to secure a promotion.</p>
+                <a href="/projects/project3" class="read-btn">Request Script PDF</a>
+              </article>
+              <article class="script-card">
+                <span class="script-tag">TV Pilot • Mystery</span>
+                <h3>The Vaal Ledger</h3>
+                <p class="logline">A disgraced forensic accountant stumbles upon a laundering network tying local politicians to international conglomerates along industrial waterways.</p>
+                <a href="/projects/project5" class="read-btn">Request Script PDF</a>
+              </article>
+            </div>
+            <button class="row-nav-btn row-next" onclick="scrollRow('tv-row', 300)">›</button>
+          </div>
+        </div>
+
+        <!-- Movie Scripts Section -->
+        <div class="script-category-section" id="movie-scripts" data-category="movie">
+          <h3>Movie Scripts</h3>
+          <div class="script-row-container">
+            <button class="row-nav-btn row-prev" onclick="scrollRow('movie-row', -300)">‹</button>
+            <div class="script-horizontal-row" id="movie-row">
+              <article class="script-card">
+                <span class="script-tag">Feature Film • Sci-Fi</span>
+                <h3>Neon Echoes</h3>
+                <p class="logline">A detective specializing in synthetic memory extraction falls down a dangerous rabbit hole after discovering a murder memory belonging to her deceased twin sister.</p>
+                <a href="/projects/project2" class="read-btn">Request Script PDF</a>
+              </article>
+              <article class="script-card">
+                <span class="script-tag">Feature Film • Thriller</span>
+                <h3>Shadow Work</h3>
+                <p class="logline">An expert art restorer uncovers a hidden message embedded underneath a masterpiece painting, triggering a deadly game with a secret society.</p>
+                <a href="/projects/project4" class="read-btn">Request Script PDF</a>
+              </article>
+            </div>
+            <button class="row-nav-btn row-next" onclick="scrollRow('movie-row', 300)">›</button>
+          </div>
+        </div>
+
+        <!-- Short Films Section -->
+        <div class="script-category-section" id="short-films" data-category="short">
+          <h3>Short Films</h3>
+          <div class="script-row-container">
+            <button class="row-nav-btn row-prev" onclick="scrollRow('short-row', -300)">‹</button>
+            <div class="script-horizontal-row" id="short-row">
+              <article class="script-card">
+                <span class="script-tag">Short Film • Drama</span>
+                <h3>Last Call at Orbit</h3>
+                <p class="logline">Two estranged siblings share one final drink inside a decaying orbital station hours before mandatory evacuation.</p>
+                <a href="/projects/project6" class="read-btn">Request Script PDF</a>
+              </article>
+            </div>
+            <button class="row-nav-btn row-next" onclick="scrollRow('short-row', 300)">›</button>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Writer & Developer Footer -->
     <footer>
@@ -47,5 +148,9 @@
         </p>
       </div>
     </footer>
+
+    <script src="/js/global.js"></script>
+    <script src="/js/projects.js"></script>
+
   </body>
 </html>

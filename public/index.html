@@ -1,22 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thato's Writing Portfolio | Home Page</title>
     <link href="/css/global.css" rel="stylesheet" />
+    <link href="/css/index.css" rel="stylesheet" />
   </head>
 
   <body>
     <!-- Header Navigation (Matches Homepage for Consistency) -->
     <header>
-      <!-- Logo/Title on the Left -->
       <a class="web-title" href="index.html"> Thato's Writing Portfolio </a>
 
-      <!-- Navigation Menu on the Right -->
       <nav class="nav-menu">
         <a href="about.html">About Me</a>
-        <a href="projects.html">My Projects</a>
+        
+        <!-- Dropdown Menu Item -->
+        <div class="dropdown">
+          <a href="projects.html" class="active">My Projects ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="#all-projects">All Projects</a></li>
+            <li><a href="#tv-scripts">TV Scripts</a></li>
+            <li><a href="#movie-scripts">Movie Scripts</a></li>
+            <li><a href="#short-films">Short Films</a></li>
+          </ul>
+        </div>
+
         <a href="contact.html">Contact Me</a>
       </nav>
     </header>
@@ -35,6 +45,8 @@
 
         <a href="public/projects.html" class="cta-button">View My Work</a>
       </section>
+
+      <br />
 
       <!-- Featured Projects Section shown in a grid with 3 cards in a row -->
       <section class="featured-projects">
@@ -109,9 +121,12 @@
         </div>
       </section>
 
+      <br />
+
       <!-- Biography Section Below -->
       <section class="biography">
         <h2>About the Writer</h2>
+        <br />
         <div class="bio-content">
           <p>
             <strong>Thato [Last Name]</strong> is a screenwriter specializing in
@@ -121,6 +136,7 @@
             intricate, character-driven narratives focused on moral gray areas,
             identity, and technological friction.
           </p>
+          <br />
           <p>
             Thato’s work has received notable recognition across major
             screenwriting platforms, landing as a [Semifinalist /
@@ -133,14 +149,19 @@
         </div>
       </section>
 
+      <br />
+
       <!-- Mini Contact Section on Homepage -->
       <section class="contact-home">
         <h2>Let's Collaborate</h2>
+        <br />
         <p>
           Interested in reading a full script feature, requesting a pilot PDF,
           or discussing representation and writing assignments? Drop a message
           below.
         </p>
+
+        <br />
 
         <!-- The Interactive Contact Form -->
         <form action="#" method="POST" class="contact-form">
@@ -221,5 +242,9 @@
         </p>
       </div>
     </footer>
+
+    <script src="/js/index.js"></script>
+    <script src="/js/global.js"></script>
+
   </body>
 </html>

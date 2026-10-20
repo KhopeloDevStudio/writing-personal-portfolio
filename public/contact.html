@@ -1,22 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thato's Writing Portfolio | Contact Thato</title>
+    <link href="/css/global.css" rel="stylesheet" />
+    <link href="/css/contact.css" rel="stylesheet" />
   </head>
 
   <body>
     <!-- Header Navigation (Matches Homepage for Consistency) -->
     <header>
-      <!-- Logo/Title on the Left -->
       <a class="web-title" href="index.html"> Thato's Writing Portfolio </a>
 
-      <!-- Navigation Menu on the Right -->
       <nav class="nav-menu">
         <a href="about.html">About Me</a>
-        <a href="projects.html">My Projects</a>
-        <a href="contact.html" class="active">Contact Me</a>
+        
+        <!-- Dropdown Menu Item -->
+        <div class="dropdown">
+          <a href="projects.html" class="active">My Projects ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="#all-projects">All Projects</a></li>
+            <li><a href="#tv-scripts">TV Scripts</a></li>
+            <li><a href="#movie-scripts">Movie Scripts</a></li>
+            <li><a href="#short-films">Short Films</a></li>
+          </ul>
+        </div>
+
+        <a href="contact.html">Contact Me</a>
       </nav>
     </header>
 
@@ -24,11 +35,14 @@
     <main>
       <section class="formal-contact-section">
         <h2>Get in Touch</h2>
+        <br />
         <p class="contact-intro">
           For script requests, representation inquiries, project options, or
           collaboration opportunities in film and television, please use the
           formal channel below.
         </p>
+
+        <br />
 
         <!-- Formal Industry Contact Form -->
         <form action="#" method="POST" class="formal-contact-form">
@@ -134,5 +148,8 @@
         </p>
       </div>
     </footer>
+
+    <script src="/js/global.js"></script>
+    <script src="/js/contact.js"></script>
   </body>
 </html>
