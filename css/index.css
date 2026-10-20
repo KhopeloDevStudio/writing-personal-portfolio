@@ -1,0 +1,195 @@
+/* ==========================================
+   INDEX PAGE SPECIFIC STYLES
+   ========================================== */
+.hero-banner {
+  max-width: 900px;
+  margin: 4rem auto 2rem;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.hero-banner h1 {
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-banner p {
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+}
+
+/* Featured Projects Carousel Section */
+.featured-projects {
+  max-width: 1300px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.featured-projects h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
+}
+
+/* Ensure exactly 3 cards fit in 1 row on desktop */
+.carousel-track .script-card {
+  flex: 0 0 calc((100% - 3rem) / 3);
+  min-width: 280px;
+}
+
+.carousel-btn {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  font-size: 1.5rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 10;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.carousel-btn:hover {
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  border-color: var(--accent);
+}
+
+.prev-btn { left: -22px; }
+.next-btn { right: -22px; }
+
+/* Biography Section */
+.biography {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.biography h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.bio-content {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+}
+
+.bio-content p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+}
+
+.bio-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Mini Contact Section on Homepage */
+.contact-home {
+  max-width: 700px;
+  margin: 4rem auto 6rem;
+  padding: 2.5rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.contact-home h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.contact-home > p {
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+  padding: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: var(--accent-hover);
+}
+
+@media (max-width: 900px) {
+  .carousel-track .script-card {
+    flex: 0 0 100%; /* Switch to 1 visible card on mobile */
+  }
+  .carousel-btn {
+    display: none; /* Use touch swipe on mobile */
+  }
+}

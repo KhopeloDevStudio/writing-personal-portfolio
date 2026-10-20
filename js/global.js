@@ -5,7 +5,7 @@ window.AppConfig = {
   API_ENDPOINT: '/api/add-script'
 };
 
-// Global security helper to prevent XSS attacks when rendering text
+// Global security helper to prevent XSS attacks when rendering text dynamically
 window.escapeHTML = function(str) {
   if (!str) return '';
   return str.replace(/[&<>'"]/g, 
@@ -22,13 +22,17 @@ window.showAlert = function(message, type = 'success') {
   setTimeout(() => alertBox.remove(), 4000);
 };
 
-// Automatically highlight the active navigation link based on the current URL
+// ==========================================
+// DOM-DEPENDENT INITIALIZATIONS
+// ==========================================
 document.addEventListener('DOMContentLoaded', () => {
+  // Automatically highlight active page in header navigation
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   
   document.querySelectorAll('.nav-menu a, .dropdown-content a').forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPath) {
+    // Match file paths while safely ignoring anchor hashes (e.g., projects.html#tv-scripts)
+    if (href && href.split('#')[0] === currentPath) {
       link.classList.add('active');
     }
   });
